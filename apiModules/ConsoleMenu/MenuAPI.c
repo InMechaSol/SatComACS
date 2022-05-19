@@ -510,7 +510,7 @@ void writeAPTMenuScreenConsole(struct aptStruct* aptStructPtrIn, struct uiStruct
 	case 4:
 		PRINT_MENU_LN  "\nDate/Time (UTC): %2i/%2i/%4i %6.0f", aptStructPtrIn->GPS.data.month, aptStructPtrIn->GPS.data.day, aptStructPtrIn->GPS.data.year, aptStructPtrIn->GPS.data.utctime  END_MENU_LN;
 	case 5:
-		PRINT_MENU_LN  "\nMagnetic Declination: \t%6.2f", 0.0											END_MENU_LN;
+        PRINT_MENU_LN  "\nMagnetic Declination: \t%6.2f", aptStructPtrIn->WMM.magdeclination			END_MENU_LN;
 	case 6:
 		PRINT_MENU_LN  "\nAzimuth Heading: \t%6.2f", aptStructPtrIn->eCompass.data.yaw					END_MENU_LN;
 	case 7:

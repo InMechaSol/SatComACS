@@ -51,14 +51,15 @@ struct aptStruct createaptStruct()
     struct aptStruct outStruct;
     outStruct.eCompass = createeCompStruct();
     outStruct.GPS = creategpsStruct();
+    outStruct.WMM = createwmmStruct();
     return outStruct;
 }
 struct wmmStruct createwmmStruct()
 {
     struct wmmStruct outStruct;
     outStruct.magdeclination = 0;
-    outStruct.lastGoodThreshold = 0;
-    outStruct.lastGoodMultiplier = 0;
+    outStruct.lastGoodThreshold = 100;  // 100 meters
+    outStruct.lastGoodMultiplier = 0.00001; // threshold * multiplier = 0.01 degrees lat/long ~.5 mile
     outStruct.lastGoodmagdeclination = 0;
     outStruct.lastGoodlongitude = 0;
     outStruct.lastGoodlatitude = 0;

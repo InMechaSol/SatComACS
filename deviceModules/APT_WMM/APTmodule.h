@@ -53,14 +53,6 @@ struct eCompStruct
 struct eCompStruct createeCompStruct();
 UI_8 readEcompass(struct eCompStruct* eCompStructPtrIn);
 
-struct aptStruct
-{
-    struct gpsStruct GPS;
-    struct eCompStruct eCompass;    
-};
-struct aptStruct createaptStruct();
-void tryReadAPTData(struct aptStruct* aptStructPtrIn);
-
 // WMM Data Structure
 struct wmmStruct
 {
@@ -75,7 +67,14 @@ struct wmmStruct
 };
 struct wmmStruct createwmmStruct();
 
-
+struct aptStruct
+{
+    struct gpsStruct GPS;
+    struct eCompStruct eCompass;
+    struct wmmStruct WMM;
+};
+struct aptStruct createaptStruct();
+void tryReadAPTData(struct aptStruct* aptStructPtrIn);
 
 #ifdef __USINGCONSOLEMENU
 

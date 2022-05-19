@@ -37,7 +37,6 @@ MODdeclareCREATE(Mn)(MODdeclareCREATEINS)
     outStruct.APT = createaptStruct();
     outStruct.TPM = createtpmStruct();
     outStruct.TxRx = createtxRxStruct();
-    outStruct.WMM = createwmmStruct();
     outStruct.ConsoleMenu = createuiStruct();
     outStruct.LCDKeyPad = createuiStruct();
     outStruct.execAPIsMainLoop = ui8TRUE;
